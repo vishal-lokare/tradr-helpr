@@ -2,7 +2,7 @@
 Entry to FrostHack 2021.
 
 ## Links
-Link to the web server hosted on Windows server machine on Google Cloud - [tradr-helpr]{"http://34.123.154.196"}
+Link to the web server hosted on Windows server machine on Google Cloud - [tradr-helpr]("http://34.123.154.196")
 
 ## What is tradr-helpr?
 If you are a day trader, you would know how difficult it is to be up-to-date with the news in realtime, with a lot of news sources being available. And you would also know how important it is to know about some specific news at the right time. So we made a bot which will be **watching** all the business news channels available through live stream, and output the recommendation/suggestion or even a news related to stock markets on a website from disctinct news channels.
