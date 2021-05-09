@@ -17,4 +17,10 @@ We execute two python scripts stored on the apache web server, one python script
 
 Then the output is converted to a JSON file and saved in the same web server. Then the website fetches data from the JSON file saved in the server.
 
-We also thought of merging all the 30 seconds video together to keep saving the livestream from the beginning and while producing the output, we 
+We also thought of merging all the 30 seconds video together to keep saving the livestream from the beginning and while producing the output, we trim out the recommendation from the main big file of video that we have been merging and display both, the text output and the trimmed video with the suggestion.
+
+## Tesing
+We were able to fetch the live stream, convert it to transcript within a minute on the Windows server machine on the Google Cloud, but we can also reduce this time by making the code more efficient and using a powerful machine with great internet connection.
+
+## Problems Faced
+The transcipter part of the python script was running fine on our pc, but when we upload the files to the server hosted on Google CLoud, it was giving out rubbish values. We tried a lot and a lot of things that wasted our 10 hours because of the google cloud itself. As the python script was running properly on our pc we thought of hosting it on our pc but again that was not successful and wasted a lot of time. At last we were able to make it working with the help of VPN on the google cloud server.
