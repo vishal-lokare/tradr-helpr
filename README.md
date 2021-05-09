@@ -27,3 +27,6 @@ We were able to fetch the live stream, convert it to transcript within a minute 
 
 ## Problems Faced
 The transcipter part of the python script was running fine on our pc, but when we upload the files to the server hosted on Google CLoud, it was giving out rubbish values. We tried a lot and a lot of things that wasted our 10 hours because of the google cloud itself. As the python script was running properly on our pc we thought of hosting it on our pc but again that was not successful and wasted a lot of time. At last we were able to make it working with the help of VPN on the google cloud server.
+
+## Note
+You can access the root folder at [link](http://34.123.154.196/), it has files of last execution, you can check the .Wav files and compare it with the [trans.txt](http://34.123.154.196/trans.txt) file. And whenever the scripts are executed from the windows machine, the previous files will be cleared.
