@@ -5,40 +5,32 @@ import speech_recognition as sr
 import os
 from pydub import AudioSegment
 from pydub.silence import split_on_silence
-n = 3
+n = 1
 
+time.sleep(60)
 while(n):
-  time.sleep(45)
-  n = n - 1
+  
 
-  f = open('counter.txt', 'r')
+  '''f = open('counter.txt', 'r')
   for line in f:
     for character in line:
       if(character.isdigit()):
         c = character
-  f.close()
+  f.close()'''
 
-  c = int(c) - 1
 
-  if(c == 1):
-    f = open('trans.txt', 'w')
-    f.close()
-
-  if(c>1):
-    trim = mp.VideoFileClip(f'{c}.mp4').subclip(30).write_videofile(f'{c}t.mp4')
-
-  time.sleep(2)
-
-  if(c>1):
-    mc = mp.VideoFileClip(f'{c}t.mp4')
-    mc.audio.write_audiofile(f'{c}.wav')
+  if(n>1):
+    trim = mp.VideoFileClip(f'{n}.mp4').subclip(25).write_videofile(f'{n}t.mp4')
+    mc = mp.VideoFileClip(f'{n}t.mp4')
+    mc.audio.write_audiofile(f'{n}.wav')
+    time.sleep(2)
   else:
-    mc = mp.VideoFileClip(f'{c}.mp4')
-    mc.audio.write_audiofile(f'{c}.wav')
-  #wav file done
-
+    mc = mp.VideoFileClip(f'{n}.mp4')
+    mc.audio.write_audiofile(f'{n}.wav')
+    time.sleep(2)
+  
   # speech to text
-  path = f'{c}.wav'
+  path = f'{n}.wav'
   r = sr.Recognizer()
 
   sound = AudioSegment.from_wav(path)  
@@ -78,4 +70,5 @@ while(n):
   trans = open('trans.txt', 'a')
   trans.write(whole_text)
   trans.close()
+  n = n + 1
 
